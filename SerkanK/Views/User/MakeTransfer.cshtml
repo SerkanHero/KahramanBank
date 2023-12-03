@@ -1,0 +1,125 @@
+﻿    <div id="contentArea" class="my-4 container">
+        <div class="row">
+            <div class="col-3 px-4">
+                <div class="list-group">
+                <a type="button" class="list-group-item list-group-item-action" asp-action="inside">Dashboard</a>
+                <a type="button" class="list-group-item list-group-item-action" asp-action="accounts">Accounts</a>
+                <a type="button" class="list-group-item list-group-item-action" asp-action="cards">Cards</a>
+                <a type="button" class="list-group-item list-group-item-action active" asp-action="transfers">Transfers</a>
+                <a type="button" class="list-group-item list-group-item-action disabled">Payments <small>(Currently Unavailable)</small></a>
+                <a type="button" class="list-group-item list-group-item-action disabled">Loans <small>(Currently Unavailable)</small></a>
+                <a type="button" class="list-group-item list-group-item-action disabled">Investments <small>(Currently Unavailable)</small></a>
+                </div>
+                <br>
+                <div class="list-group">
+                    <a type="button" class="list-group-item list-group-item-action" asp-action="support">Support</a>
+                </div>
+            </div>
+
+        <div class="col-9 px-2">
+            <div class="card">
+                <div class="card-body">
+
+                    @{
+                        if(ViewBag.Error != null)
+                        {
+                            <div class="col-12">
+                                <div class="alert alert-danger" role="alert">
+                                    @ViewBag.Error
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            if (ViewBag.Success != null)
+                            {
+                                <div class="col-12">
+                                    <div class="alert alert-success" role="alert">
+                                        @ViewBag.Success
+                                    </div>
+                                </div>
+                            }
+                        }
+                    }
+                    
+
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb bg-light border rounded">
+                            <li class="breadcrumb-item">Transfers</li>
+                            <li class="breadcrumb-item active">Make Transfer</li>
+                        </ol>
+                    </nav>
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">FAST</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">EFT <small>(Currently Unavailable)</small></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Swift <small>(Currently Unavailable)</small></a>
+                        </li>
+                    </ul>
+
+                    <form class="row g-3 p-4" asp-action="FastTransfer" method="POST">
+                        <div class="col-12">
+                            <label for="accountSelection">Account:</label>
+                            @{
+                                    <select class="form-control" id="accountSelection">
+                                        <option selected>TL Account</option>
+                                    </select>
+                                    <input type="hidden" name="accountID" id="accountID" value="@(((ViewBag.UserInfo as User).Accounts.First<Account>() as Account).AccountID)" />
+                            }
+                        </div>
+
+                        <div class="col-12">
+                            <label for="amount">Amount:</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="amount" name="amount" placeholder="0" min="0" max="@(Decimal.ToInt32(((ViewBag.UserInfo as User).Accounts.First<Account>() as Account).Balance))">
+                                <div class="input-group-text">@(Decimal.ToInt32(((ViewBag.UserInfo as User).Accounts.First<Account>() as Account).Balance) ) (Available Balance)</div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="targetAccountID">Recipient Account ID <small>(It'll be IBAN after dev)</small></label>
+                            <input type="textbox" class="form-control" name="targetAccountID" id="targetAccountID" placeholder="0">
+                        </div>
+                        <!--
+                        <div class="col-12">
+                            <label for="nameAndSurnameTextBox">Recipient Name & Surname:</label>
+                            <input type="textbox" class="form-control" id="nameAndSurnameTextBox" placeholder="Jane Doe">
+                        </div>-->
+
+                        <div class="col-12">
+                            <label for="typeSelection">Type:</label>
+                            <select class="form-control" id="typeSelection">
+                                <option>Investment</option>
+                                <option>Payment</option>
+                                <option>Allowance</option>
+                                <option selected>Other</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="transferNote">Note:</label>
+                            <textarea class="form-control" id="transferNote" name="transferNote"></textarea>
+                        </div>
+
+                        @{
+                            if ((ViewBag.UserInfo as User).Accounts == null || (ViewBag.UserInfo as User).Accounts.Count == 0)
+                            {
+                                <div class="alert alert-danger" role="alert">
+                                    In order to make transfers, you must have an account!
+                                </div>
+                                <button type="button" class="btn btn-dark disabled" disabled>(FAST) Transfer</button>
+                            }else
+                            {
+                                <button type="submit" class="btn btn-dark">(FAST) Transfer</button>
+                            }
+                        }
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

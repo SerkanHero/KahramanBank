@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KahramanBank - @ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/bootstrap.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/bootstrap-icons.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/extra.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SerkanK.styles.css" asp-append-version="true" />
+</head>
+
+@{
+    User user = (ViewBag.UserInfo as User) ?? null;
+}
+<body>
+    <header class="bg-dark text-white py-3">
+        <div class="container p-2">
+
+            <div class="row onlineBankHeader">
+                <div class="col-4">
+                    <h3 class="h2 text-center">KahramanBank</h3>
+                </div>
+                <div class="col-8">
+                    <div class="row row-cols-2 g-4">
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-body d-flex text-black my-auto">
+                                    <div class="col-6 budgetArea">
+                                        <p class="lead" style="margin-bottom: 0px !important;">Balance:</p>
+                                        <p class="lead" style="margin-bottom: 0px !important;">
+                                            @{
+                                                decimal val = 0;
+
+                                                if(user?.Accounts == null || user?.Accounts.Count == 0)
+                                                {
+                                                    val = 0;
+                                                }
+                                                else
+                                                {
+                                                    val = 0;
+                                                    foreach (var account in user?.Accounts)
+                                                    {
+                                                        val += account.Balance;
+                                                    }
+                                                }
+                                            }
+                                            @(val)
+                                            TL</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-body text-black">
+
+                                    <div class="row">
+                                        <div class="col-8 d-flex my-auto"><p class="lead m-0">
+                                                @(user?.Name + " " + user?.Surname)
+                                        </p></div>
+                                        <div class="col-4"><a type="button" class="btn btn-dark float-end text-white" asp-action="Logout" asp-controller="User">Logout</a></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </header>
+
+    @RenderBody()
+
+    <footer class="bg-dark text-white">
+        <div class="container">
+            <div class="py-5">
+                <div class="py-4 my-4 text-center">
+                    <p>© 2023 KahramanBank. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        var inputElement = document.getElementById('inputID');
+        inputElement.addEventListener('input', function (event) {
+            var inputValue = event.target.value;
+            var numericValue = inputValue.replace(/\D/g, '');
+            event.target.value = numericValue;
+        });
+    </script>
+
+    <script src="~/js/bootstrap.bundle.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.slim.min.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,509 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\SerkanK.bundle.scp.css",
+      "PackagePath": "staticwebassets\\SerkanK.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\css\\bootstrap-icons.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-icons.css"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\css\\extra.css",
+      "PackagePath": "staticwebassets\\css\\extra.css"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-Black.woff",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-Black.woff"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-Black.woff2",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-Black.woff2"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-BlackItalic.woff",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-BlackItalic.woff"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-BlackItalic.woff2",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-BlackItalic.woff2"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-Bold.woff",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-Bold.woff"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-Bold.woff2",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-Bold.woff2"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-BoldItalic.woff",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-BoldItalic.woff"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-BoldItalic.woff2",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-BoldItalic.woff2"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-ExtraBold.woff",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-ExtraBold.woff"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-ExtraBold.woff2",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-ExtraBold.woff2"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-ExtraBoldItalic.woff",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-ExtraBoldItalic.woff"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-ExtraBoldItalic.woff2",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-ExtraBoldItalic.woff2"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-ExtraLight.woff",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-ExtraLight.woff"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-ExtraLight.woff2",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-ExtraLight.woff2"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-ExtraLightItalic.woff",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-ExtraLightItalic.woff"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-ExtraLightItalic.woff2",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-ExtraLightItalic.woff2"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-Italic.woff",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-Italic.woff"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-Italic.woff2",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-Italic.woff2"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-Light.woff",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-Light.woff"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-Light.woff2",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-Light.woff2"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-LightItalic.woff",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-LightItalic.woff"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-LightItalic.woff2",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-LightItalic.woff2"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-Medium.woff",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-Medium.woff"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-Medium.woff2",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-Medium.woff2"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-MediumItalic.woff",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-MediumItalic.woff"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-MediumItalic.woff2",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-MediumItalic.woff2"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-Regular.woff",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-Regular.woff"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-Regular.woff2",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-Regular.woff2"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-SemiBold.woff",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-SemiBold.woff"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-SemiBold.woff2",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-SemiBold.woff2"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-SemiBoldItalic.woff",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-SemiBoldItalic.woff"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-SemiBoldItalic.woff2",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-SemiBoldItalic.woff2"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-Thin.woff",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-Thin.woff"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-Thin.woff2",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-Thin.woff2"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-ThinItalic.woff",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-ThinItalic.woff"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-ThinItalic.woff2",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-ThinItalic.woff2"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-italic.var.woff2",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-italic.var.woff2"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter-roman.var.woff2",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter-roman.var.woff2"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\Inter.var.woff2",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\Inter.var.woff2"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\Inter Web\\inter.css",
+      "PackagePath": "staticwebassets\\font\\Inter Web\\inter.css"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\font\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\font\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\img\\appGallery.svg",
+      "PackagePath": "staticwebassets\\img\\appGallery.svg"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\img\\appStore.svg",
+      "PackagePath": "staticwebassets\\img\\appStore.svg"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\img\\applicationForm.jpg",
+      "PackagePath": "staticwebassets\\img\\applicationForm.jpg"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\img\\applicationForm2.jpg",
+      "PackagePath": "staticwebassets\\img\\applicationForm2.jpg"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\img\\card1.jpg",
+      "PackagePath": "staticwebassets\\img\\card1.jpg"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\img\\card2.jpg",
+      "PackagePath": "staticwebassets\\img\\card2.jpg"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\img\\creditAndLow.jpg",
+      "PackagePath": "staticwebassets\\img\\creditAndLow.jpg"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\img\\cropCard1.jpg",
+      "PackagePath": "staticwebassets\\img\\cropCard1.jpg"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\img\\googlePlay.svg",
+      "PackagePath": "staticwebassets\\img\\googlePlay.svg"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\img\\logo-removebg-preview.png",
+      "PackagePath": "staticwebassets\\img\\logo-removebg-preview.png"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\img\\logo.jpg",
+      "PackagePath": "staticwebassets\\img\\logo.jpg"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\img\\person1.jpg",
+      "PackagePath": "staticwebassets\\img\\person1.jpg"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\img\\person2.jpg",
+      "PackagePath": "staticwebassets\\img\\person2.jpg"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\img\\placeholder1.png",
+      "PackagePath": "staticwebassets\\img\\placeholder1.png"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\img\\security.jpg",
+      "PackagePath": "staticwebassets\\img\\security.jpg"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\js\\jquery.slim.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.slim.min.js"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\SekoSiteMVC\\SerkanK\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.SerkanK.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.SerkanK.props",
+      "PackagePath": "build\\SerkanK.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.SerkanK.props",
+      "PackagePath": "buildMultiTargeting\\SerkanK.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.SerkanK.props",
+      "PackagePath": "buildTransitive\\SerkanK.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

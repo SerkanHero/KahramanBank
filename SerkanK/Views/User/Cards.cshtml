@@ -1,0 +1,63 @@
+﻿    <div id="contentArea" class="my-4 container">
+        <div class="row">
+            <div class="col-3 px-4">
+                <div class="list-group">
+                    <a type="button" class="list-group-item list-group-item-action" asp-action="inside">Dashboard</a>
+                    <a type="button" class="list-group-item list-group-item-action" asp-action="accounts">Accounts</a>
+                    <a type="button" class="list-group-item list-group-item-action active" asp-action="cards">Cards</a>
+                    <a type="button" class="list-group-item list-group-item-action" asp-action="transfers">Transfers</a>
+                    <a type="button" class="list-group-item list-group-item-action disabled">Payments <small>(Currently Unavailable)</small></a>
+                    <a type="button" class="list-group-item list-group-item-action disabled">Loans <small>(Currently Unavailable)</small></a>
+                    <a type="button" class="list-group-item list-group-item-action disabled">Investments <small>(Currently Unavailable)</small></a>
+                </div>
+                <br>
+                <div class="list-group">
+                    <a type="button" class="list-group-item list-group-item-action" asp-action="support">Support</a>
+                </div>
+            </div>
+
+            <div class="col-9 px-2">
+                <div class="card">
+                    <div class="card-body">
+                        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                            <ol class="breadcrumb bg-light border rounded">
+                                <li class="breadcrumb-item active">Cards</li>
+                            </ol>
+                        </nav>
+
+                        <div class="creditCardList">
+                            <a href="#" class="text-black creditCard position-relative" style="text-decoration: none !important; cursor: default;">
+                                <div class="creditCardDetails shadow-sm border rounded">
+                                    <span class="position-absolute top-0 start-50 translate-middle badge rounded text-bg-dark">
+                                        Bank Card
+                                    </span>
+                                    <div class="nameAndNumber">
+                                        <h6>Card Number</h6>
+                                        <p class="number">0000 0000 0000 0000</p>
+                                    <p class="name">@((ViewBag.UserInfo as User).Name + " " + (ViewBag.UserInfo as User).Surname)</p>
+                                    </div>
+                                    <div class="validDate">
+                                        <h6>Valid Thru</h6>
+                                        <p class="date">12/77</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!--<a href="#" class="text-black creditCard" style="text-decoration: none !important;">
+                                <div class="newCard shadow-sm border rounded">
+                                    <p class="text-center lead m-0 p-0">Request a New Card</p>
+                                </div>
+                            </a>-->
+                        </div>
+
+                        <div class="col-12">
+                            <div class="alert alert-secondary" role="alert">
+                                Only one card can be requested for a temporary. For other account opening procedures, please in touch.
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

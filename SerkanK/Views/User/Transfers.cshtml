@@ -1,0 +1,68 @@
+﻿    <div id="contentArea" class="my-4 container">
+        <div class="row">
+            <div class="col-3 px-4">
+                <div class="list-group">
+                <a type="button" class="list-group-item list-group-item-action" asp-action="inside">Dashboard</a>
+                <a type="button" class="list-group-item list-group-item-action" asp-action="accounts">Accounts</a>
+                <a type="button" class="list-group-item list-group-item-action" asp-action="cards">Cards</a>
+                <a type="button" class="list-group-item list-group-item-action active" asp-action="transfers">Transfers</a>
+                <a type="button" class="list-group-item list-group-item-action disabled">Payments <small>(Currently Unavailable)</small></a>
+                <a type="button" class="list-group-item list-group-item-action disabled">Loans <small>(Currently Unavailable)</small></a>
+                <a type="button" class="list-group-item list-group-item-action disabled">Investments <small>(Currently Unavailable)</small></a>
+                </div>
+                <br>
+                <div class="list-group">
+                    <a type="button" class="list-group-item list-group-item-action" asp-action="support">Support</a>
+                </div>
+            </div>
+
+            <div class="col-9 px-2">
+                <div class="card">
+                    <div class="card-body">
+
+                        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                            <ol class="breadcrumb bg-light border rounded">
+                                <li class="breadcrumb-item active">Transfers</li>
+                            </ol>
+                        </nav>
+
+                    @{
+                        if ((ViewBag.UserInfo as User).Accounts == null || (ViewBag.UserInfo as User).Accounts.Count == 0)
+                        {
+                            <div class="alert alert-secondary" role="alert">
+                                To view the transfer menu, you must first open an account.
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <a asp-action="MakeTransfer" asp-controller="User" class="text-black" style="text-decoration: none !important;">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="lead text-center m-0">Make Transfer</h5>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!--<div class="col-sm-6">
+                                    <a href="hTransfers.html" class="text-black" style="text-decoration: none !important;">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="lead text-center m-0">Transfers History</h5>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>-->
+                            </div>
+                        }
+                    }
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>

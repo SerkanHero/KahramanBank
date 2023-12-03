@@ -1,0 +1,54 @@
+﻿<div id="contentArea" class="my-4 container">
+    <div class="row">
+        <div class="col-3 px-4">
+            <div class="list-group">
+                <a type="button" class="list-group-item list-group-item-action" asp-action="inside">Dashboard</a>
+                <a type="button" class="list-group-item list-group-item-action" asp-action="accounts">Accounts</a>
+                <a type="button" class="list-group-item list-group-item-action" asp-action="cards">Cards</a>
+                <a type="button" class="list-group-item list-group-item-action" asp-action="transfers">Transfers</a>
+                <a type="button" class="list-group-item list-group-item-action disabled">Payments <small>(Currently Unavailable)</small></a>
+                <a type="button" class="list-group-item list-group-item-action disabled">Loans <small>(Currently Unavailable)</small></a>
+                <a type="button" class="list-group-item list-group-item-action disabled">Investments <small>(Currently Unavailable)</small></a>
+            </div>
+            <br>
+            <div class="list-group">
+                <a type="button" class="list-group-item list-group-item-action active" asp-action="support">Support</a>
+            </div>
+        </div>
+
+        <div class="col-9 px-2">
+            <div class="card">
+                <div class="card-body">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb bg-light border rounded">
+                            <li class="breadcrumb-item">Support</li>
+                            <li class="breadcrumb-item active">Create a Ticket</li>
+                        </ol>
+                    </nav>
+
+                    <form class="row g-3 p-4">
+
+                        <div class="col-12">
+                            <label for="ticketTitle">Ticket Title:</label>
+                            <input type="textbox" class="form-control" id="ticketTitle" placeholder="Lorem Ipsum">
+                        </div>
+
+                        <div class="col-12">
+                            <label for="ticketCategory">Ticket Category:</label>
+                            <select class="form-control" id="ticketCategory">
+                                <option selected>Other</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="ticketText">Text:</label>
+                            <textarea class="form-control" id="ticketText"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-dark">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

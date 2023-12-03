@@ -1,0 +1,14 @@
+﻿@{
+    var routeUrl = ViewContext.RouteData.Values["Controller"].ToString();
+
+    switch (routeUrl)
+    {
+        case "User":
+            Layout = "_OnlineBankLayout";
+            break;
+        case "Home":
+        default:
+            Layout = "_Layout";
+            break;
+    }
+}

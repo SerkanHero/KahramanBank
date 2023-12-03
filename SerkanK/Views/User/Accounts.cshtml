@@ -1,0 +1,79 @@
+﻿<div id="contentArea" class="my-4 container">
+    <div class="row">
+        <div class="col-3 px-4">
+            <div class="list-group">
+                <a type="button" class="list-group-item list-group-item-action" asp-action="inside">Dashboard</a>
+                <a type="button" class="list-group-item list-group-item-action active" asp-action="accounts">Accounts</a>
+                <a type="button" class="list-group-item list-group-item-action" asp-action="cards">Cards</a>
+                <a type="button" class="list-group-item list-group-item-action" asp-action="transfers">Transfers</a>
+                <a type="button" class="list-group-item list-group-item-action disabled">Payments <small>(Currently Unavailable)</small></a>
+                <a type="button" class="list-group-item list-group-item-action disabled">Loans <small>(Currently Unavailable)</small></a>
+                <a type="button" class="list-group-item list-group-item-action disabled">Investments <small>(Currently Unavailable)</small></a>
+            </div>
+            <br>
+            <div class="list-group">
+                <a type="button" class="list-group-item list-group-item-action" asp-action="support">Support</a>
+            </div>
+        </div>
+
+        <div class="col-9 px-2">
+            <div class="card">
+                <div class="card-body">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb bg-light border rounded">
+                            <li class="breadcrumb-item active">Accounts</li>
+                        </ol>
+                    </nav>
+
+
+                    <div class="d-flex flex-column">
+
+                        <div class="d-flex flex-row justify-content-around">
+                            @{
+                                if (((ViewBag.UserInfo as User).Accounts)!=null)
+                                {
+                                    foreach (var account in ((ViewBag.UserInfo as User).Accounts))
+                                    { 
+                                    <div class="col-sm-4">
+                                        <a href="#" class="text-black" style="text-decoration: none !important; cursor: default;">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-center">@(account.AccountName) Account</h5>
+                                                    <p class="card-text text-center lead">@(account.Balance != null ? account.Balance : "0") TL</p>
+                                                    <p class="small p-0 m-0 text-center">TR00 0000X 0 12345678901234567</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    }
+                                }
+                            }
+
+                            @{
+                                if (((ViewBag.UserInfo as User).Accounts) != null && ((ViewBag.UserInfo as User).Accounts).Count > 0)
+                                {
+                                    <div class="col-sm-4">
+                                        <div class="alert alert-secondary h-100" role="alert">
+                                            Only one TL account can be requested for a temporary. For other account opening procedures, please in touch.
+                                        </div>
+                                    </div>
+                                }else{
+                                    <div class="col-sm-4">
+                                        <a asp-action="AddAccount" asp-route-userID="@((ViewBag.UserInfo as User).ID)" class="text-black" style="text-decoration: none !important;">
+                                            <div class="card h-100">
+                                                <div class="card-body d-flex align-items-center justify-content-center">
+                                                    <h5 class="lead text-center m-0">Request a New Account</h5>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                }
+                            }
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

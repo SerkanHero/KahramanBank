@@ -1,0 +1,121 @@
+﻿
+<div id="contentArea" class="my-4 container">
+    <div class="row">
+        <div class="col-3 px-4">
+            <div class="list-group">
+                <a type="button" class="list-group-item list-group-item-action active" asp-action="inside">Dashboard</a>
+                <a type="button" class="list-group-item list-group-item-action" asp-action="accounts">Accounts</a>
+                <a type="button" class="list-group-item list-group-item-action" asp-action="cards">Cards</a>
+                <a type="button" class="list-group-item list-group-item-action" asp-action="transfers">Transfers</a>
+                <a type="button" class="list-group-item list-group-item-action disabled">Payments <small>(Currently Unavailable)</small></a>
+                <a type="button" class="list-group-item list-group-item-action disabled">Loans <small>(Currently Unavailable)</small></a>
+                <a type="button" class="list-group-item list-group-item-action disabled">Investments <small>(Currently Unavailable)</small></a>
+            </div>
+            <br>
+            <div class="list-group">
+                <a type="button" class="list-group-item list-group-item-action" asp-action="support">Support</a>
+            </div>
+        </div>
+
+        <div class="col-9 px-2">
+            <div class="card">
+                <div class="card-body">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb bg-light border rounded">
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
+                    </nav>
+
+                    <div class="row px-4 justify-content-between">
+                        <div class="card col-4">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Total Currencies</h5>
+                                <table class="table">
+                                    <thead>
+                                        <tr class="text-center">
+                                            <th scope="col">Currency</th>
+                                            <th scope="col">Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Turkish Lira</td>
+                                            <td>
+                                                @{
+                                                    User user = ViewBag.UserInfo as User;
+                                                    decimal val = 0;
+
+                                                    if (user?.Accounts == null || user?.Accounts.Count == 0)
+                                                    {
+                                                        val = 0;
+                                                    }
+                                                    else
+                                                    {
+                                                        val = 0;
+                                                        foreach (var account in user?.Accounts)
+                                                        {
+                                                            val += account.Balance;
+                                                        }
+                                                    }
+                                                }
+                                                @(val) TL
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="text-center">Other currencies currently not available. Please in touch.</p>
+                            </div>
+                        </div>
+
+                        <div class="card col-7">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Last 5 Transfers</h5>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">From</th>
+                                            <th scope="col">To</th>
+                                            <th scope="col">Amount</th>
+                                            <th scope="col">Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @{
+                                            if (ViewBag.Transactions != null)
+                                            {
+                                                List<Transaction> transactionList = ViewBag.Transactions as List<Transaction>;
+                                                foreach (Transaction transaction in transactionList)
+                                                {
+                                                    <tr>
+                                                        <td>@(transaction.SenderAccount.User.Name + " " + transaction.SenderAccount.User.Surname)</td>
+                                                        <td>@(transaction.ReceiverAccount.User.Name + " " + transaction.ReceiverAccount.User.Surname)</td>
+                                                        @{
+                                                            if (transaction.SenderAccount.UserID == (ViewBag.UserInfo as User).ID)
+                                                            {
+                                                                <td class="text-danger">@("-" + transaction.Amount) </td>
+                                                            }
+                                                            else
+                                                            {
+                                                                <td class="text-success">@("+" + transaction.Amount) </td>
+                                                            }
+                                                        }
+                                                        <td>@(transaction.TransactionDate)</td>
+                                                    </tr>
+                                                }
+                                                <tr>
+                                                    <td></td>
+                                                </tr>
+                                            }else{
+                                                <p class="text-center">There is no transaction.</p>
+                                            }
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

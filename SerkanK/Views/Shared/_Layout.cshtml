@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KahramanBank - @ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/bootstrap.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/bootstrap-icons.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/extra.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SerkanK.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="bg-dark text-white py-3">
+        <div class="container p-2">
+
+            <h3 class="h2 text-center pb-2">KahramanBank</h3>
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-center currentVisit text-dark" href="@Url.Action("index", "Home")">Home</a>
+                            </li>
+                            <span class="navbar-text mx-2">|</span>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-center dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Accounts</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="@Url.Action("StaticPage", "Home")">Current Deposit Account</a></li>
+                                    <li><a class="dropdown-item" href="@Url.Action("StaticPage", "Home")">Time Deposit Account</a></li>
+                                    <li><a class="dropdown-item" href="@Url.Action("StaticPage", "Home")">Exchange Rate Protected TL Time Deposit Account</a></li>
+                                    <li><a class="dropdown-item" href="@Url.Action("StaticPage", "Home")">Savings Account</a></li>
+                                    <li><a class="dropdown-item" href="@Url.Action("StaticPage", "Home")">Gold Account</a></li>
+                                </ul>
+                            </li>
+                            <span class="navbar-text mx-2">|</span>
+                            <li class="nav-item">
+                                <a class="nav-link text-center text-dark" href="@Url.Action("StaticPage", "Home")">Loans</a>
+                            </li>
+                            <span class="navbar-text mx-2">|</span>
+                            <li class="nav-item">
+                                <a class="nav-link text-center text-dark" href="@Url.Action("StaticPage", "Home")">
+                                    Credit Card
+                                </a>
+                            </li>
+                            <span class="navbar-text mx-2">|</span>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-center dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Payments</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item text-dark" href="@Url.Action("StaticPage", "Home")">Bills</a></li>
+                                    <li><a class="dropdown-item text-dark" href="@Url.Action("StaticPage", "Home")">Credit Cards</a></li>
+                                    <li><a class="dropdown-item text-dark" href="@Url.Action("StaticPage", "Home")">Tax</a></li>
+                                    <li><a class="dropdown-item text-dark" href="@Url.Action("StaticPage", "Home")">SGK</a></li>
+                                    <li><a class="dropdown-item text-dark" href="@Url.Action("StaticPage", "Home")">Istanbul Card</a></li>
+                                    <li><a class="dropdown-item text-dark" href="@Url.Action("StaticPage", "Home")">Izmirim Card</a></li>
+                                </ul>
+                            </li>
+                            <span class="navbar-text mx-2">|</span>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-center dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Transfers</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item text-dark" href="@Url.Action("StaticPage", "Home")">EFT/FAST</a></li>
+                                    <li><a class="dropdown-item text-dark" href="@Url.Action("StaticPage", "Home")">Swift</a></li>
+                                </ul>
+                            </li>
+                            <span class="navbar-text mx-2">|</span>
+                            <li class="nav-item">
+                                <a class="nav-link text-center text-dark" href="@Url.Action("StaticPage", "Home")">Exchange Rates</a>
+                            </li>
+                            <span class="navbar-text mx-2">|</span>
+                            <li class="nav-item">
+                                <a class="nav-link text-center text-dark" href="@Url.Action("StaticPage", "Home")">Promotions</a>
+                            </li>
+                            <span class="navbar-text mx-2">|</span>
+                            <li class="nav-item d-flex align-items-center">
+                                <a class="btn btn-dark text-white btn-sm" class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" href="#">Online Banking</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+
+    </header>
+
+    @RenderBody()
+
+    <footer class="bg-dark text-white">
+        <div class="container">
+            <div class="py-5">
+                <div class="row">
+                    <div class="col-6 col-md-2 mb-3">
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="@Url.Action("StaticPage", "Home")" class="nav-link p-0 text-white">What Is KahramanBank?</a></li>
+                            <li class="nav-item mb-2"><a href="@Url.Action("StaticPage", "Home")" class="nav-link p-0 text-white">Our Services</a></li>
+                            <li class="nav-item mb-2"><a href="@Url.Action("StaticPage", "Home")" class="nav-link p-0 text-white">Announcements</a></li>
+                            <li class="nav-item mb-2"><a href="@Url.Action("StaticPage", "Home")" class="nav-link p-0 text-white">Security</a></li>
+                            <li class="nav-item mb-2"><a href="@Url.Action("StaticPage", "Home")" class="nav-link p-0 text-white">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-md-2 mb-3">
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="@Url.Action("StaticPage", "Home")" class="nav-link p-0 text-white">Credit Card</a></li>
+                            <li class="nav-item mb-2"><a href="@Url.Action("StaticPage", "Home")" class="nav-link p-0 text-white">Loans</a></li>
+                            <li class="nav-item mb-2"><a href="@Url.Action("StaticPage", "Home")" class="nav-link p-0 text-white">Deposit Account</a></li>
+                            <li class="nav-item mb-2"><a href="@Url.Action("StaticPage", "Home")" class="nav-link p-0 text-white">Exchange Rates</a></li>
+                            <li class="nav-item mb-2"><a href="@Url.Action("StaticPage", "Home")" class="nav-link p-0 text-white">Gold Account</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-md-2 mb-3">
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="@Url.Action("StaticPage", "Home")" class="nav-link p-0 text-white">Frequently Asked Questions</a></li>
+                            <li class="nav-item mb-2"><a href="@Url.Action("StaticPage", "Home")" class="nav-link p-0 text-white">Career</a></li>
+                            <li class="nav-item mb-2"><a href="@Url.Action("StaticPage", "Home")" class="nav-link p-0 text-white">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-5 offset-md-1 mb-3">
+                        <div id="appStores">
+                            <div class="appStore">
+                                <img src="img/appStore.svg" alt="">
+                            </div>
+                            <div class="appStore">
+                                <img src="img/googlePlay.svg" alt="">
+                            </div>
+                            <div class="appStore">
+                                <img src="img/appGallery.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                    <p>© 2023 KahramanBank. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--
+    <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+      Giriş Yap
+    </a>-->
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Online Banking</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+            <form asp-action="Login" asp-controller="User" method="POST">
+                <div class="mb-3">
+                    <label for="inputID" class="form-label">ID</label>
+                    <input type="text" class="form-control" id="inputID" name="inputID" placeholder="00000000000" required>
+                </div>
+                <div class="mb-3">
+                    <label for="inputPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;" required>
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button type="submit" class="text-center btn btn-dark">Log In</button>
+                    <button type="button" class="btn" disabled data-bs-toggle="button">Sign Up</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <script>
+        var inputElement = document.getElementById('inputID');
+        inputElement.addEventListener('input', function (event) {
+            var inputValue = event.target.value;
+            var numericValue = inputValue.replace(/\D/g, '');
+            event.target.value = numericValue;
+        });
+    </script>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/bootstrap.bundle.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.slim.min.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
