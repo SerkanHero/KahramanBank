@@ -1,0 +1,185 @@
+.onlineBankHeader {
+    align-content: center !important;
+    align-items: center !important;
+}
+
+    .onlineBankHeader h1, .onlineBankHeader .h1,
+    .onlineBankHeader h2, .onlineBankHeader .h2,
+    .onlineBankHeader h3, .onlineBankHeader .h3,
+    .onlineBankHeader h4, .onlineBankHeader .h4,
+    .onlineBankHeader h5, .onlineBankHeader .h5 {
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+    }
+
+.budgetArea {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-nav .nav-link.currentVisit {
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+    text-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.navbar-toggler {
+    margin: auto;
+}
+
+    .navbar-toggler::after {
+        content: "Menu";
+    }
+
+.carousel-item img {
+    height: 350px;
+    width: inherit;
+}
+
+#contentArea {
+    display: block;
+    min-height: calc(100vh - 344px);
+}
+
+.accountsList {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+ol.breadcrumb, ul.breadcrumb {
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.creditCardList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+a.creditCard, .creditCard {
+    width: fit-content;
+    height: fit-content;
+    margin: 1rem;
+}
+
+.newCard {
+    width: 315px;
+    height: 175px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.list-group-item.active, a .active,
+.dropdown-menu li a:focus,
+.dropdown-menu li a:hover {
+    background-color: var(--bs-gray-900) !important;
+    border-color: var(--bs-gray-900) !important;
+    color: var(--bs-gray-100) !important;
+}
+
+select option:checked {
+    background-color: var(--bs-gray-900) !important;
+    border-color: var(--bs-gray-900) !important;
+}
+
+select option:checked, .active a {
+    background-color: var(--bs-gray-900) !important;
+    border-color: var(--bs-gray-900) !important;
+}
+
+.creditCardDetails {
+    width: 315px;
+    height: 175px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    align-items: flex-end;
+    background-color: red;
+    background: hsla(0, 0%, 44%, 1);
+    background: linear-gradient(45deg, hsla(0, 0%, 44%, 1) 0%, hsla(0, 0%, 80%, 1) 74%, hsla(0, 0%, 44%, 1) 100%);
+    background: -moz-linear-gradient(45deg, hsla(0, 0%, 44%, 1) 0%, hsla(0, 0%, 80%, 1) 74%, hsla(0, 0%, 44%, 1) 100%);
+    background: -webkit-linear-gradient(45deg, hsla(0, 0%, 44%, 1) 0%, hsla(0, 0%, 80%, 1) 74%, hsla(0, 0%, 44%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#6F6F6F", endColorstr="#CBCBCB", GradientType=1 );
+}
+
+    .creditCardDetails .number {
+        margin-top: 4px;
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+    .creditCardDetails .name {
+        margin-top: 20px;
+    }
+
+ol.breadcrumb a, ul.breadcrumb a {
+    text-decoration: none;
+}
+
+#mainAdsContents {
+    width: calc(80%);
+    margin: auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+    #mainAdsContents .adsContents:nth-child(2n) {
+        margin-left: auto;
+    }
+
+    #mainAdsContents .adsContents {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+        #mainAdsContents .adsContents .adsImage {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: center !important;
+            align-items: center !important;
+        }
+
+
+            #mainAdsContents .adsContents .adsImage img {
+                border-radius: 50% !important;
+            }
+
+#appStores {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+
+    #appStores .appStore {
+        width: 162px;
+        height: 50px;
+    }
+
+footer {
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+}
