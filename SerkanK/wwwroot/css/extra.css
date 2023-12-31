@@ -1,3 +1,7 @@
+.bg-dark {
+    background-color: #1c2d5c !important;
+}
+
 .onlineBankHeader {
     align-content: center !important;
     align-items: center !important;
@@ -18,6 +22,36 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel-caption {
+    background-color: #00000080;
+}
+
+    /*
+    .carousel-caption {
+    position: relative;
+    left: 0;
+    bottom: 6rem;
+    width: 100%;
+    height: fit-content;
+    padding-top: 0.5rem;
+    padding-bottom: 0.25rem;
+    background-color: #00000080;
+}
+
+*/
+
+.carousel-item img {
+    filter: blur(0.25rem);
+}
+
+.navbar-toggler {
+    width: 100%;
 }
 
 .navbar-nav .nav-link.currentVisit {
@@ -152,8 +186,8 @@ ol.breadcrumb a, ul.breadcrumb a {
     }
 
         #mainAdsContents .adsContents .adsImage {
-            margin-top: 2rem;
-            margin-bottom: 2rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
             display: flex;
             flex-direction: row;
             justify-content: center !important;
@@ -169,7 +203,7 @@ ol.breadcrumb a, ul.breadcrumb a {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-content: center;
+    align-content: flex-end;
     align-items: center;
 }
 
