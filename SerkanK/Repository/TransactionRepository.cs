@@ -9,7 +9,8 @@ namespace SerkanK.Repository
     {
         public bool CreateTransaction(int senderAccountID, int receiverAccountID, int amount, DateTime dateTime, string desc);
         public bool CreateTransaction(int senderAccountID, Account senderAccount, int receiverAccountID, Account receiverAccount, int amount, DateTime dateTime, string desc);
-        public Transaction GetTransaction(int ID);
+        public Transaction? GetTransaction(int ID);
+        public List<Transaction> GetTransactions();
         public ICollection<Transaction> GetAllTransactionOfThisAccountAsSender(int SenderAccountID);
         public ICollection<Transaction> GetAllTransactionOfThisAccountAsReceiver(int ReceiverAccountID);
         public ICollection<Transaction> GetAllTransactionOfThisAccount(int AccountID);
@@ -27,6 +28,13 @@ namespace SerkanK.Repository
         }
 
         public bool dbCheck() => context.StartUpCheck;
+
+
+        public List<Transaction> GetTransactions()
+        {
+            return context.Transactions.ToList();
+        }
+
         public bool CreateTransaction(int senderAccountID, Account senderAccount, int receiverAccountID, Account receiverAccount, int amount, DateTime dateTime, string desc)
         {
             Transaction transaction = new Transaction();
@@ -43,7 +51,7 @@ namespace SerkanK.Repository
             context.SaveChanges();
             return true;
         }
-
+        
         public bool CreateTransaction(int senderAccountID, int receiverAccountID, int amount, DateTime dateTime, string desc)
         {
             Transaction transaction = new Transaction();
@@ -59,9 +67,9 @@ namespace SerkanK.Repository
             return true;
         }
 
-        public Transaction GetTransaction(int ID)
+        public Transaction? GetTransaction(int ID)
         {
-            return context.Transactions.Where(t => t.TransactionID == ID) as Transaction;
+            return context.Transactions.FirstOrDefault(t => t.TransactionID == ID);
         }
 
         public ICollection<Transaction> GetAllTransactionOfThisAccountAsSender(int SenderAccountID)
@@ -80,7 +88,15 @@ namespace SerkanK.Repository
         {
             var transactionList = context.Transactions.Where(t => t.SenderAccountID == AccountID).ToList<Transaction>();
             var transactionList2 = context.Transactions.Where(t => t.ReceiverAccountID == AccountID).ToList<Transaction>();
-            var transactionListFull = transactionList.Concat(transactionList2).Distinct().ToList();
+            var transactionListFull = transactionList;
+            if (transactionList != null && transactionList2 != null)
+            {
+                transactionListFull = transactionList.Concat(transactionList2).Distinct().ToList();
+            }
+            else if(transactionList2 != null)
+            {
+                transactionListFull = transactionList2;
+            }
 
             return transactionListFull;
         }

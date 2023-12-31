@@ -10,12 +10,14 @@ namespace SerkanK.Controllers
         IUserService userService;
         IAccountService accountService;
         ITransactionService transactionService;
+        ICardService cardService;
 
-        public UserController(IUserService _userService, IAccountService _accountService, ITransactionService _transactionService)
+        public UserController(IUserService _userService, ICardService _cardService, IAccountService _accountService, ITransactionService _transactionService)
         {
             userService = _userService;
             accountService = _accountService;
             transactionService = _transactionService;
+            cardService = _cardService;
         }
 
         public IActionResult Index()
@@ -43,7 +45,7 @@ namespace SerkanK.Controllers
             }
 
             if(userService.Register(user))
-                return View("~/Views/Home/Index.cshtml");
+                return RedirectToAction("Index", "Home");
             else
             {
                 ViewBag.Error = "Failed to create user account.";
@@ -78,30 +80,56 @@ namespace SerkanK.Controllers
             return RedirectToAction("Inside");
         }
 
-        [HttpGet]
-        public IActionResult AddAccount(string userID, string accountType = "0") // 0 is TL Account.
+        [HttpPost]
+        public IActionResult AddCard(string accountID)
         {
-            Debug.WriteLine("gelen: " + userID);
-            int _userID = Int32.Parse(userID);
-            int _accountType = Int32.Parse(accountType);
-
-            if (_accountType == null)
+            if(accountID == null && accountID?.Length < 1)
             {
-                _accountType = 0;
+                accountID = "-1";
             }
+            int aID = int.Parse(accountID);
 
-            if(_userID == null)
+            if (HttpContext.Session.GetString("SessionID") == null)
             {
-                if (HttpContext.Session.GetString("SessionID") != null)
-                {
-                    HttpContext.Session.Remove("SessionID");
-                }
-                TempData["Error"] = "Login information is incorrect.";
+                TempData["Error"] = "User information is empty.";
                 return RedirectToAction("Index", "Home");
             }
 
-            accountService.AddAccount(_userID, _accountType);
+            User activeUser = userService.GetUser(Int32.Parse(HttpContext.Session.GetString("SessionID") ?? "-1"));
 
+            int _userID = activeUser.ID;
+
+            if (_userID == -1)
+            {
+                return RedirectToAction("Logout");
+            }
+
+            cardService.AddCard(_userID, aID, 0);
+            return RedirectToAction("Cards");
+        }
+
+        [HttpGet]
+        public IActionResult AddAccount(string userID, string accountType = "0") // 0 is TL Account.
+        {
+            if (HttpContext.Session.GetString("SessionID") == null)
+            {
+                TempData["Error"] = "User information is empty.";
+                return RedirectToAction("Index", "Home");
+            }
+
+            User activeUser = userService.GetUser(Int32.Parse(HttpContext.Session.GetString("SessionID") ?? "-1"));
+
+            int _userID = activeUser.ID;
+            int _accountType = Int32.Parse(accountType);
+
+            _accountType = (_accountType == null) ? 0 : _accountType;
+
+            if(_userID == -1 || _userID == null)
+            {
+                return RedirectToAction("Logout");
+            }
+
+            accountService.AddAccount(_userID, _accountType);
             return RedirectToAction("Inside");
         }
 
@@ -140,7 +168,11 @@ namespace SerkanK.Controllers
             }
 
             User activeUser = userService.GetUser(Int32.Parse(HttpContext.Session.GetString("SessionID")));
-            List<Transaction> transactions = transactionService.GetAllTransactionOfThisAccount(accountService.GetAccountsOfUserID(activeUser.ID).First<Account>().AccountID).ToList<Transaction>();
+            int accountID = accountService.GetAccountsOfUserID(activeUser.ID).FirstOrDefault<Account>()?.AccountID ?? -1;
+            List<Transaction> transactions = new List<Transaction>();
+            if (accountID != -1) {
+                transactions = transactionService.GetAllTransactionOfThisAccount(accountID).ToList<Transaction>();
+            }
             ViewBag.UserInfo = activeUser;
             ViewBag.Transactions = transactions;
             return View();
@@ -155,7 +187,10 @@ namespace SerkanK.Controllers
             }
 
             User activeUser = userService.GetUser(Int32.Parse(HttpContext.Session.GetString("SessionID")));
+            List<Card> Cards = cardService.GetCardWithHolder(activeUser.ID);
             ViewBag.UserInfo = activeUser;
+            ViewBag.Cards = Cards;
+            ViewBag.Accounts = accountService.GetAccountsOfUserID(activeUser.ID);
             return View();
         }
 
@@ -168,7 +203,16 @@ namespace SerkanK.Controllers
             }
 
             User activeUser = userService.GetUser(Int32.Parse(HttpContext.Session.GetString("SessionID")));
+
+            int accountID = accountService.GetAccountsOfUserID(activeUser.ID).FirstOrDefault<Account>()?.AccountID ?? -1;
+            List<Transaction> transactions = new List<Transaction>();
+            if (accountID != -1)
+            {
+                transactions = transactionService.GetAllTransactionOfThisAccount(accountID).ToList<Transaction>();
+            }
             ViewBag.UserInfo = activeUser;
+            ViewBag.Transactions = transactions;
+
             return View();
         }
 
@@ -180,9 +224,52 @@ namespace SerkanK.Controllers
                 return RedirectToAction("Index", "Home");
             }
 
-            User activeUser = userService.GetUser(Int32.Parse(HttpContext.Session.GetString("SessionID")));
+            User activeUser = userService.GetUser(Int32.Parse(HttpContext.Session.GetString("SessionID") ?? "-1"));
+            if (activeUser == null)
+            {
+                TempData["Error"] = "User information is empty.";
+                return RedirectToAction("Index", "Home");
+            }
+
             ViewBag.UserInfo = activeUser;
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult MakeTransfer(int accountID, decimal amount, string IBAN, string typeSelection, string transferNote)
+        {
+            if (HttpContext.Session.GetString("SessionID") == null)
+            {
+                TempData["Error"] = "User information is empty.";
+                return RedirectToAction("Index", "Home");
+            }
+            User activeUser = userService.GetUser(Int32.Parse(HttpContext.Session.GetString("SessionID") ?? "-1"));
+            if (activeUser == null)
+            {
+                TempData["Error"] = "User information is empty.";
+                return RedirectToAction("Index", "Home");
+            }
+            ViewBag.UserInfo = activeUser;
+
+            Account foundAccount = activeUser.Accounts.FirstOrDefault(account => account.AccountID == accountID) ?? null;
+
+            if(foundAccount == null)
+            {
+                TempData["Error"] = "Account can not be found.";
+                return RedirectToAction("Inside");
+            }
+
+            if (foundAccount.Balance >= amount)
+            {
+                Account rec = accountService.GetAccount(IBAN);
+                if (rec == null)
+                {
+                    return RedirectToAction("Inside");
+                }
+                transactionService.CreateTransaction(foundAccount.AccountID, rec.AccountID, Int32.Parse(amount.ToString() ?? "-1"), DateTime.Now, transferNote);
+            }
+
+            return RedirectToAction("Inside");
         }
 
         public IActionResult Accounts()
@@ -211,5 +298,18 @@ namespace SerkanK.Controllers
             return View();
         }
 
+        public IActionResult Payment()
+        {
+            if (HttpContext.Session.GetString("SessionID") == null)
+            {
+                TempData["Error"] = "User information is empty.";
+                return RedirectToAction("Index", "Home");
+            }
+
+            User activeUser = userService.GetUser(Int32.Parse(HttpContext.Session.GetString("SessionID")));
+
+            ViewBag.UserInfo = activeUser;
+            return View();
+        }
     }
 }

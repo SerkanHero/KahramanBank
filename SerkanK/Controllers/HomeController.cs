@@ -15,6 +15,10 @@ namespace SerkanK.Controllers
 
         public IActionResult Index()
         {
+            if (HttpContext.Session.GetString("SessionID") != null)
+            {
+                return RedirectToAction("Index", "User");
+            }
             if (TempData["Error"]!=null)
             {
                 ViewBag.Error = TempData["Error"].ToString();

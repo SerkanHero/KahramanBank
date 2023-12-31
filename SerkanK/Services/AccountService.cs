@@ -10,6 +10,7 @@ namespace SerkanK.Services
     {
         public bool AddAccount(int UserID, int AccountType);
         public Account GetAccount(int id);
+        public Account GetAccount(string IBAN);
         public ICollection<Account> GetAccountsOfUserID(int UserID);
         public bool dbCheck();
         public User GetUserFromAccount(Account account);
@@ -37,6 +38,11 @@ namespace SerkanK.Services
             Account tempAccount = accountRepository.GetAccount(id);
             tempAccount.User = userRepository.GetUser(tempAccount.UserID);
             return tempAccount;
+        }
+
+        public Account GetAccount(string IBAN)
+        {
+            return accountRepository.GetAccount(IBAN);
         }
 
         public ICollection<Account> GetAccountsOfUserID(int userID) => accountRepository.GetAccountsOfUser(userID);

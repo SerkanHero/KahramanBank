@@ -11,6 +11,7 @@ namespace SerkanK.Repository
         public bool IsUserActive(int ID);
         public User? GetUser(int ID);
         public User? GetUser(string IdentificationNumber);
+        public List<User> GetUsers();
         public bool AddUser(User user);
         public bool dbCheck();
     }
@@ -44,5 +45,9 @@ namespace SerkanK.Repository
             return true;
         }
 
+        public List<User> GetUsers()
+        {
+            return context.Users.ToList();
+        }
     }
 }

@@ -30,5 +30,11 @@ namespace SerkanK.Models
         [NotMapped]
         public User CardHolder { get; set; }
 
+        [ForeignKey("Account")]
+        public int CardAccountID { get; set; }
+
+        [NotMapped]
+        public Account CardAccount { get; set; }
+
     }
 }

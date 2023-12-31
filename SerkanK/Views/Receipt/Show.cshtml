@@ -1,0 +1,84 @@
+﻿@{
+    Layout = null;
+}
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .a4 {
+        height: 297mm;
+        width: 210mm;
+        box-shadow: 0 0 0.3rem #00000090;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 1.2rem;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    p{
+        display: flex;
+    }
+
+    strong{
+        width: 30%;
+        display: block;
+    }
+</style>
+<div id="contentArea" class="a4">
+    <div class="row">
+        <div class="col-9 px-2">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex flex-column">
+
+                        <h1>KahramanBank</h1>
+
+                        <div class="d-flex flex-row justify-content-around">
+                            @{
+                                if ((ViewBag.UserInfo) != null && (ViewBag.Transaction) != null)
+                                {
+                                    Transaction t = ViewBag.Transaction;
+
+                                    <div class="container">
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-8">
+                                                <div class="dekont">
+                                                    <h4 class="text-center mb-4">Dekont</h4>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <p><strong>Tarih:</strong> @(t.TransactionDate)</p>
+                                                            <p><strong>İşlem Numarası:</strong> #@(t.TransactionID)</p>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <p><strong>Tutar:</strong> @(t.Amount) TL</p>
+                                                            <p><strong>Alıcı:</strong> @(t.ReceiverAccount.User.Name) @(t.ReceiverAccount.User.Surname)</p>
+                                                            <p><strong>Alıcı Hesap Bilgileri:</strong> @(t.ReceiverAccount.IBAN)</p>
+                                                            <p><strong>Gönderici Hesap Bilgileri:</strong> @(t.SenderAccount.IBAN)</p>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="text-center">
+                                                        <p><strong>İşlem Ayrıntıları:</strong></p>
+                                                        <p>@(t.Description)</p>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="text-right">
+                                                        <p><strong>Onay:</strong> @(t.SenderAccount.User.Name) @(t.SenderAccount.User.Surname)</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

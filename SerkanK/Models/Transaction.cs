@@ -10,13 +10,13 @@ namespace SerkanK.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int TransactionID { get; set; }
 
-        [ForeignKey("User")]
+        [ForeignKey("Account")]
         public int SenderAccountID { get; set; }
 
         [NotMapped]
         public Account SenderAccount { get; set; }
 
-        [ForeignKey("User")]
+        [ForeignKey("Account")]
         public int ReceiverAccountID { get; set; }
 
         [NotMapped]

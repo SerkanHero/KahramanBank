@@ -1,0 +1,62 @@
+﻿    <div id="contentArea" class="my-4 container">
+        <div class="row">
+            <div class="col-3 px-4">
+                <div class="list-group">
+                    <a type="button" class="list-group-item list-group-item-action" asp-action="inside">Dashboard</a>
+                    <a type="button" class="list-group-item list-group-item-action" asp-action="accounts">Accounts</a>
+                    <a type="button" class="list-group-item list-group-item-action" asp-action="cards">Cards</a>
+                    <a type="button" class="list-group-item list-group-item-action" asp-action="transfers">Transfers</a>
+                <a type="button" class="list-group-item list-group-item-action active" asp-action="payment">Payments</a>
+                </div>
+                <br>
+                <div class="list-group">
+                    <a type="button" class="list-group-item list-group-item-action" asp-action="support">Support</a>
+                </div>
+            </div>
+
+            <div class="col-9 px-2">
+                <div class="card">
+                    <div class="card-body">
+
+                        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                            <ol class="breadcrumb bg-light border rounded">
+                                <li class="breadcrumb-item active">Payments</li>
+                            </ol>
+                        </nav>
+
+                    @{
+                        if ((ViewBag.UserInfo as User).Accounts == null || (ViewBag.UserInfo as User).Accounts.Count == 0)
+                        {
+                            <div class="alert alert-secondary" role="alert">
+                                To view the payments, you must first open an account.
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="alert alert-dark mb-4" role="alert">
+                                Your payments are made according to the subscription in your registered Identity Number. There is no refund.
+                            </div>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="odemeTuru" class="form-label">Type:</label>
+                                    <select class="form-select" id="odemeTuru" name="odemeYeri">
+                                        <option value="suFaturasi">Su Faturası (KahramanSu)</option>
+                                        <option value="elektrikFaturasi">Electricity Bill (KahramanElectricity)</option>
+                                        <option value="internetFaturasi">Internet Bill (KahramanNet)</option>
+                                        <option value="dogalGazFaturasi">Natural Gas Bill (KahramanGass)</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="ucret" class="form-label">Ücret:</label>
+                                    <input type="number" class="form-control" id="ucret" name="ucret" min="1" onkeydown="return event.keyCode !== 189;" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        }
+                    }
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

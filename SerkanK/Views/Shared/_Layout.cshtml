@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="~/css/extra.css" asp-append-version="true">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/SerkanK.styles.css" asp-append-version="true" />
+    <link rel="icon" href="~/img/kahramanBankIco.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="~/img/kahramanBankIco.ico" type="image/x-icon">
 </head>
 <body>
     <header class="bg-dark text-white py-3">
@@ -18,7 +20,7 @@
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
                 <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
@@ -26,28 +28,32 @@
                             <li class="nav-item">
                                 <a class="nav-link text-center currentVisit text-dark" href="@Url.Action("index", "Home")">Home</a>
                             </li>
-                            <span class="navbar-text mx-2">|</span>
+                            <span class="navbar-text d-none d-lg-block mx-2">|</span>
+                            <hr class="navbar-text d-none d-xs-block d-sm-block d-md-block d-lg-none mx-2 py-0 my-1"></hr>
                             <li class="nav-item dropdown">
                                 <a class="nav-link text-center dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Accounts</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="@Url.Action("StaticPage", "Home")">Current Deposit Account</a></li>
-                                    <li><a class="dropdown-item" href="@Url.Action("StaticPage", "Home")">Time Deposit Account</a></li>
-                                    <li><a class="dropdown-item" href="@Url.Action("StaticPage", "Home")">Exchange Rate Protected TL Time Deposit Account</a></li>
-                                    <li><a class="dropdown-item" href="@Url.Action("StaticPage", "Home")">Savings Account</a></li>
-                                    <li><a class="dropdown-item" href="@Url.Action("StaticPage", "Home")">Gold Account</a></li>
+                                    <li><a class="dropdown-item text-dark" href="@Url.Action("StaticPage", "Home")">Current Deposit Account</a></li>
+                                    <li><a class="dropdown-item text-dark" href="@Url.Action("StaticPage", "Home")">Time Deposit Account</a></li>
+                                    <li><a class="dropdown-item text-dark" href="@Url.Action("StaticPage", "Home")">Exchange Rate Protected TL Time Deposit Account</a></li>
+                                    <li><a class="dropdown-item text-dark" href="@Url.Action("StaticPage", "Home")">Savings Account</a></li>
+                                    <li><a class="dropdown-item text-dark" href="@Url.Action("StaticPage", "Home")">Gold Account</a></li>
                                 </ul>
                             </li>
-                            <span class="navbar-text mx-2">|</span>
+                            <span class="navbar-text d-none d-lg-block mx-2">|</span>
+                            <hr class="navbar-text d-none d-xs-block d-sm-block d-md-block d-lg-none mx-2 py-0 my-1"></hr>
                             <li class="nav-item">
                                 <a class="nav-link text-center text-dark" href="@Url.Action("StaticPage", "Home")">Loans</a>
                             </li>
-                            <span class="navbar-text mx-2">|</span>
+                            <span class="navbar-text d-none d-lg-block mx-2">|</span>
+                            <hr class="navbar-text d-none d-xs-block d-sm-block d-md-block d-lg-none mx-2 py-0 my-1"></hr>
                             <li class="nav-item">
                                 <a class="nav-link text-center text-dark" href="@Url.Action("StaticPage", "Home")">
                                     Credit Card
                                 </a>
                             </li>
-                            <span class="navbar-text mx-2">|</span>
+                            <span class="navbar-text d-none d-lg-block mx-2">|</span>
+                            <hr class="navbar-text d-none d-xs-block d-sm-block d-md-block d-lg-none mx-2 py-0 my-1"></hr>
                             <li class="nav-item dropdown">
                                 <a class="nav-link text-center dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Payments</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -59,7 +65,8 @@
                                     <li><a class="dropdown-item text-dark" href="@Url.Action("StaticPage", "Home")">Izmirim Card</a></li>
                                 </ul>
                             </li>
-                            <span class="navbar-text mx-2">|</span>
+                            <span class="navbar-text d-none d-lg-block mx-2">|</span>
+                            <hr class="navbar-text d-none d-xs-block d-sm-block d-md-block d-lg-none mx-2 py-0 my-1"></hr>
                             <li class="nav-item dropdown">
                                 <a class="nav-link text-center dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Transfers</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -67,17 +74,20 @@
                                     <li><a class="dropdown-item text-dark" href="@Url.Action("StaticPage", "Home")">Swift</a></li>
                                 </ul>
                             </li>
-                            <span class="navbar-text mx-2">|</span>
+                            <span class="navbar-text d-none d-lg-block mx-2">|</span>
+                            <hr class="navbar-text d-none d-xs-block d-sm-block d-md-block d-lg-none mx-2 py-0 my-1"></hr>
                             <li class="nav-item">
                                 <a class="nav-link text-center text-dark" href="@Url.Action("StaticPage", "Home")">Exchange Rates</a>
                             </li>
-                            <span class="navbar-text mx-2">|</span>
+                            <span class="navbar-text d-none d-lg-block mx-2">|</span>
+                            <hr class="navbar-text d-none d-xs-block d-sm-block d-md-block d-lg-none mx-2 py-0 my-1"></hr>
                             <li class="nav-item">
                                 <a class="nav-link text-center text-dark" href="@Url.Action("StaticPage", "Home")">Promotions</a>
                             </li>
-                            <span class="navbar-text mx-2">|</span>
-                            <li class="nav-item d-flex align-items-center">
-                                <a class="btn btn-dark text-white btn-sm" class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" href="#">Online Banking</a>
+                            <span class="navbar-text d-none d-lg-block mx-2">|</span>
+                            <hr class="navbar-text d-none d-xs-block d-sm-block d-md-block d-lg-none mx-2 py-0 my-1"></hr>
+                            <li class="nav-item">
+                                <a class="nav-link bg-dark rounded text-white text-center" class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" href="#">Online Banking</a>
                             </li>
                         </ul>
                     </div>
@@ -144,10 +154,6 @@
         </div>
     </footer>
 
-    <!--
-    <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-      Giriş Yap
-    </a>-->
 
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
@@ -167,7 +173,32 @@
                 </div>
                 <div class="d-grid gap-2 col-6 mx-auto">
                     <button type="submit" class="text-center btn btn-dark">Log In</button>
-                    <button type="button" class="btn" disabled data-bs-toggle="button">Sign Up</button>
+                </div>
+            </form>
+            <hr />
+            <form asp-action="Register" asp-controller="User" method="POST">
+                <div class="mb-3">
+                    <label for="inputID" class="form-label">ID</label>
+                    <input type="text" class="form-control" id="inputID" name="IdentificationNumber" placeholder="00000000000" required>
+                </div>
+                <div class="mb-3">
+                    <label for="inputID" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="inputID" name="Email" placeholder="name@mail.com" required>
+                </div>
+                <div class="mb-3">
+                    <label for="inputID" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="inputID" name="Password" placeholder="00000000000" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Name Surname</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="Name">
+                        <input type="text" class="form-control" name="Surname">
+                    </div>
+                </div>
+
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <input type="submit" class="text-center btn btn-dark" value="Sign Up" />
                 </div>
             </form>
 

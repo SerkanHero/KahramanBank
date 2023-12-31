@@ -13,6 +13,7 @@ namespace SerkanK.Services
         public User GetUser(User user);
         public User GetUser(string IN);
         public User Login(string IdentificationNumber, string Password);
+        public List<User> GetUsers();
         public bool Register(User user);
         public bool dbCheck();
     }
@@ -56,6 +57,12 @@ namespace SerkanK.Services
             tempUser.Accounts = accountRepository.GetAccountsOfUser(tempUser.ID);
             return tempUser;
         }
+
+        public List<User> GetUsers()
+        {
+            return userRepository.GetUsers();
+        }
+
         public User Login(string IdentificationNumber, string Password)
         {
             User u = userRepository.GetUser(IdentificationNumber);

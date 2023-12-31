@@ -15,6 +15,8 @@ namespace SerkanK.Models
         [NotMapped]
         public User User { get; set; }
 
+        public string IBAN { get; set; }
+
         public string AccountName { get; set; }
 
         [Required]

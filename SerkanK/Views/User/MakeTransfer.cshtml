@@ -2,13 +2,11 @@
         <div class="row">
             <div class="col-3 px-4">
                 <div class="list-group">
-                <a type="button" class="list-group-item list-group-item-action" asp-action="inside">Dashboard</a>
-                <a type="button" class="list-group-item list-group-item-action" asp-action="accounts">Accounts</a>
-                <a type="button" class="list-group-item list-group-item-action" asp-action="cards">Cards</a>
-                <a type="button" class="list-group-item list-group-item-action active" asp-action="transfers">Transfers</a>
-                <a type="button" class="list-group-item list-group-item-action disabled">Payments <small>(Currently Unavailable)</small></a>
-                <a type="button" class="list-group-item list-group-item-action disabled">Loans <small>(Currently Unavailable)</small></a>
-                <a type="button" class="list-group-item list-group-item-action disabled">Investments <small>(Currently Unavailable)</small></a>
+                    <a type="button" class="list-group-item list-group-item-action" asp-action="inside">Dashboard</a>
+                    <a type="button" class="list-group-item list-group-item-action" asp-action="accounts">Accounts</a>
+                    <a type="button" class="list-group-item list-group-item-action" asp-action="cards">Cards</a>
+                    <a type="button" class="list-group-item list-group-item-action active" asp-action="transfers">Transfers</a>
+                    <a type="button" class="list-group-item list-group-item-action " asp-action="payment">Payments</a>
                 </div>
                 <br>
                 <div class="list-group">
@@ -61,7 +59,7 @@
                         </li>
                     </ul>
 
-                    <form class="row g-3 p-4" asp-action="FastTransfer" method="POST">
+                    <form class="row g-3 p-4" asp-action="MakeTransfer" method="POST">
                         <div class="col-12">
                             <label for="accountSelection">Account:</label>
                             @{
@@ -81,14 +79,9 @@
                         </div>
 
                         <div class="col-12">
-                            <label for="targetAccountID">Recipient Account ID <small>(It'll be IBAN after dev)</small></label>
-                            <input type="textbox" class="form-control" name="targetAccountID" id="targetAccountID" placeholder="0">
+                            <label for="targetAccountID">Recipient Account IBAN</label>
+                            <input type="textbox" class="form-control" name="IBAN" id="IBAN" placeholder="0">
                         </div>
-                        <!--
-                        <div class="col-12">
-                            <label for="nameAndSurnameTextBox">Recipient Name & Surname:</label>
-                            <input type="textbox" class="form-control" id="nameAndSurnameTextBox" placeholder="Jane Doe">
-                        </div>-->
 
                         <div class="col-12">
                             <label for="typeSelection">Type:</label>
